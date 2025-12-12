@@ -1,70 +1,69 @@
-README
-Conversation Evaluation Script
+# Conversation Evaluation Script
 
 This assignment contains a small evaluation pipeline that scores an AI’s response based on relevance, completeness, and hallucination. It also measures latency and gives a rough cost estimate.
 
-How to run it
-Clone the repository:
-git clone https://github.com/<your-username>/<repo-name>.git
-cd <repo-name>
+---
 
-Install the required package:
+## How to Run
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/Dhiraj-989/Beyondchats-assignment.git
+cd Beyondchats-assignment
+```
+
+### 2. Install the required package
+```bash
 pip install json5
+```
 
-Run the script:
+### 3. Run the script
+```bash
 python evaluate.py
+```
 
+After running, an `evaluation_output.json` file will be created with all the scores.
 
-After running, an evaluation_output.json file will be created with all the scores.
+---
 
-What the Script Does
+## What the Script Does
 
-Loads the sample conversation JSON.
+- Loads the sample conversation JSON  
+- Finds the last user query and the last model response  
+- Loads context chunks from the vector JSON  
+- Runs three evaluation checks:
+  - **Relevance** – checks if the response matches important parts of the query  
+  - **Completeness** – checks how much of the query is covered  
+  - **Hallucination** – checks whether the response is supported by the context  
+- Measures runtime  
+- Estimates a rough cost based on word count  
+- Saves everything into a JSON output file  
 
-Finds the last user query and the last model response.
+---
 
-Loads context chunks from the vector JSON.
+## Why This Approach
 
-Runs three evaluation checks:
+I kept the solution simple and easy to understand:
+- Fully local and lightweight  
+- No external API calls  
+- No embeddings or heavy ML models  
+- Uses fast string-based checks  
+- Easy to read, modify, and extend  
 
-Relevance – checks if the response matches the main parts of the query.
+---
 
-Completeness – checks how much of the query is covered.
+## Scaling
 
-Hallucination – checks whether the response is supported by the context.
+The script relies only on basic Python string operations, which are extremely fast.  
+Each conversation is evaluated independently, so the process scales well even for large volumes (millions of evaluations).  
+Since there are no expensive computations or external services, latency and cost remain minimal.
 
-Measures runtime.
+---
 
-Estimates a rough cost based on word count.
+## Files Included
 
-Saves the result into a JSON file.
-
-Why This Approach
-
-Simple and easy to understand.
-
-No external APIs or heavy ML models.
-
-Everything runs locally.
-
-Fast string-based checks.
-
-Easy to extend and modify.
-
-Scaling
-
-The script uses only basic Python operations (string matching, splits, etc.) which are very fast.
-Since each conversation is processed independently, it can scale to large volumes easily.
-No expensive operations or heavy dependencies are involved.
-
-Files Included
-
-evaluate.py — main script
-
-sample-chat-conversation-02.json — chat input
-
-sample_context_vectors-01.json — context chunks
-
-evaluation_output.json — output file
-
-README.md — documentation
+- `evaluate.py` — main evaluation script  
+- `sample-chat-conversation-02.json` — chat input  
+- `sample_context_vectors-01.json` — context chunks  
+- `evaluation_output.json` — output file created by the script  
+- `README.md` — documentation  
