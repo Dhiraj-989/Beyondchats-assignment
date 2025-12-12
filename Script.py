@@ -105,7 +105,7 @@ def check_completeness(query, response):
 
 
 
-# -------------------- HALLUCINATION CHECK --------------------
+# HALLUCINATION CHECK
 def check_hallucination(response, chunks):
     # break response into sentences using "."
     resp_sentences = response.lower().split(".")
