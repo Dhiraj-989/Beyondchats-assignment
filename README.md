@@ -1,27 +1,21 @@
+README
 Conversation Evaluation Script
 
-This assignment contains a small evaluation pipeline that scores an AI’s response based on relevance, completeness, and hallucination.
-It also measures latency and gives a rough cost estimate.
+This assignment contains a small evaluation pipeline that scores an AI’s response based on relevance, completeness, and hallucination. It also measures latency and gives a rough cost estimate.
 
 How to run it
-
 Clone the repository:
-
 git clone https://github.com/<your-username>/<repo-name>.git
 cd <repo-name>
 
-
 Install the required package:
-
 pip install json5
 
-
 Run the script:
-
 python evaluate.py
 
 
-After running, you will get an evaluation_output.json file that contains all the scores.
+After running, an evaluation_output.json file will be created with all the scores.
 
 What the Script Does
 
@@ -35,45 +29,42 @@ Runs three evaluation checks:
 
 Relevance – checks if the response matches the main parts of the query.
 
-Completeness – checks if the answer covers enough information.
+Completeness – checks how much of the query is covered.
 
-Hallucination – checks if the response is supported by the given context.
+Hallucination – checks whether the response is supported by the context.
 
 Measures runtime.
 
 Estimates a rough cost based on word count.
 
-Saves everything into a JSON result file.
+Saves the result into a JSON file.
 
-All evaluations are done using simple string-based logic.
+Why This Approach
 
-Why I Built It This Way
+Simple and easy to understand.
 
-I kept the solution lightweight because it's easy to understand and doesn’t require complex setup.
-Everything runs locally, and there are:
+No external APIs or heavy ML models.
 
-no embeddings,
+Everything runs locally.
 
-no external API calls,
+Fast string-based checks.
 
-no large models involved.
+Easy to extend and modify.
 
-This makes the script easy to maintain, test, and modify.
+Scaling
 
-How This Scales
-
-The script uses basic Python string operations, which run very quickly.
-There is no heavy computation involved, and each conversation is evaluated independently.
-Because of this, the approach can scale to large volumes (even millions of evaluations) while keeping latency and cost low.
+The script uses only basic Python operations (string matching, splits, etc.) which are very fast.
+Since each conversation is processed independently, it can scale to large volumes easily.
+No expensive operations or heavy dependencies are involved.
 
 Files Included
 
-evaluate.py — main evaluation script
+evaluate.py — main script
 
-sample-chat-conversation-02.json — conversation input
+sample-chat-conversation-02.json — chat input
 
 sample_context_vectors-01.json — context chunks
 
-evaluation_output.json — output file created by the script
+evaluation_output.json — output file
 
-README.md — project documentation
+README.md — documentation
