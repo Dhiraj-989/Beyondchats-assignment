@@ -1,4 +1,4 @@
-<img width="384" height="256" alt="image_0E5E85E1E9" src="https://github.com/user-attachments/assets/b3f2fd8e-3335-4826-a485-adce8a450f98" /># Conversation Evaluation Script
+# Conversation Evaluation Script
 
 This assignment contains a small evaluation pipeline that scores an AI’s response based on relevance, completeness, and hallucination. It also measures latency and gives a rough cost estimate.
 
