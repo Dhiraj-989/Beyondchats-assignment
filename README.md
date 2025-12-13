@@ -1,7 +1,6 @@
 # Conversation Evaluation Script
 
-This assignment contains a small evaluation pipeline that scores an AI’s response based on relevance, completeness, and hallucination. It also measures latency and gives a rough cost estimate.
-
+Setup
 ---
 
 ## How to Run
@@ -44,14 +43,13 @@ After running, an `evaluation_output.json` file will be created with all the sco
 Architecture
 ![Architecture of evaluation pipeline_page-0001](https://github.com/user-attachments/assets/800ea3eb-9e43-4863-a7ea-985ec0b87ea7)
 
-## Why This Approach
+## Why This Approach ?
 
 I kept the solution simple and easy to understand:
 - Fully local and lightweight  
 - No external API calls  
 - No embeddings or heavy ML models  
-- Uses fast string-based checks  
-- Easy to read, modify, and extend  
+- Uses fast string-based checks   
 
 ---
 
