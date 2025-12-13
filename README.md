@@ -57,16 +57,10 @@ I kept the solution simple and easy to understand:
 
 ## Scaling
 
-The script relies only on basic Python string operations, which are extremely fast.  
-Each conversation is evaluated independently, so the process scales well even for large volumes (millions of evaluations).  
-Since there are no expensive computations or external services, latency and cost remain minimal.
+- No additional LLM or external API calls are made during evaluation, eliminating inference costs and network latency.
 
----
+- All metrics are computed using lightweight string operations with linear-time complexity --> O(n).
 
-## Files Included
+- Evaluation is bounded to the latest user query, model response, and a fixed set of context chunks, ensuring predictable latency.
 
-- `evaluate.py` — main evaluation script  
-- `sample-chat-conversation-02.json` — chat input  
-- `sample_context_vectors-01.json` — context chunks  
-- `evaluation_output.json` — output file created by the script  
-- `README.md` — documentation  
+- Minimal dependencies and local computation keep the per-request cost negligible, even at large scale.
