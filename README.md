@@ -41,6 +41,10 @@ After running, an `evaluation_output.json` file will be created with all the sco
 
 ---
 
+Architecture
+
+[Architecture of evaluation pipeline.pdf](https://github.com/user-attachments/files/24141226/Architecture.of.evaluation.pipeline.pdf)
+
 ## Why This Approach
 
 I kept the solution simple and easy to understand:
