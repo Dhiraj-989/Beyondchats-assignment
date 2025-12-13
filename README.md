@@ -42,10 +42,7 @@ After running, an `evaluation_output.json` file will be created with all the sco
 ---
 
 Architecture
-
-[Architecture of evaluation pipeline.pdf](https://github.com/user-attachments/files/24141226/Architecture.of.evaluation.pipeline.pdf)
-
-<img width="384" height="256" alt="image_0E5E85E1E9" src="https://github.com/user-attachments/assets/dadbf467-f359-4dbc-ae11-e17136b8dfe0" />
+![Architecture of evaluation pipeline_page-0001](https://github.com/user-attachments/assets/800ea3eb-9e43-4863-a7ea-985ec0b87ea7)
 
 ## Why This Approach
 
