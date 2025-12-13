@@ -1,4 +1,4 @@
-# Conversation Evaluation Script
+<img width="384" height="256" alt="image_0E5E85E1E9" src="https://github.com/user-attachments/assets/b3f2fd8e-3335-4826-a485-adce8a450f98" /># Conversation Evaluation Script
 
 This assignment contains a small evaluation pipeline that scores an AI’s response based on relevance, completeness, and hallucination. It also measures latency and gives a rough cost estimate.
 
@@ -44,6 +44,8 @@ After running, an `evaluation_output.json` file will be created with all the sco
 Architecture
 
 [Architecture of evaluation pipeline.pdf](https://github.com/user-attachments/files/24141226/Architecture.of.evaluation.pipeline.pdf)
+
+<img width="384" height="256" alt="image_0E5E85E1E9" src="https://github.com/user-attachments/assets/dadbf467-f359-4dbc-ae11-e17136b8dfe0" />
 
 ## Why This Approach
 
