@@ -19,7 +19,7 @@ pip install json5
 
 ### 3. Run the script
 ```bash
-python evaluate.py
+python script.py
 ```
 
 After running, an `evaluation_output.json` file will be created with all the scores.
